@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/*
+ * Tailwind's preflight strips heading/list styling, so markdown rendered into
+ * the capacity-analysis result area needs its own typography rules.
+ */
+.markdown-body {
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 700;
+  color: #002451;
+  line-height: 1.25;
+  margin: 1.25em 0 0.5em;
+}
+
+.markdown-body > :first-child {
+  margin-top: 0;
+}
+
+.markdown-body h1 { font-size: 1.3rem; }
+.markdown-body h2 { font-size: 1.1rem; }
+.markdown-body h3 { font-size: 0.98rem; }
+
+.markdown-body h2,
+.markdown-body h3 {
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.3em;
+}
+
+.markdown-body p {
+  margin: 0.7em 0;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+  color: #00408A;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0.7em 0;
+  padding-left: 1.4em;
+}
+
+.markdown-body ul { list-style: disc; }
+.markdown-body ol { list-style: decimal; }
+
+.markdown-body li {
+  margin: 0.3em 0;
+}
+
+.markdown-body a {
+  color: #0057B8;
+  text-decoration: underline;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82em;
+  background: #EFF5FC;
+  color: #00408A;
+  padding: 0.12em 0.4em;
+  border-radius: 0.35rem;
+}
+
+.markdown-body pre {
+  background: #0A1628;
+  color: #DCE8F7;
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  overflow-x: auto;
+  margin: 0.9em 0;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 0.78rem;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid #4FA8E0;
+  background: #F5F9FE;
+  margin: 0.9em 0;
+  padding: 0.5em 0.9em;
+  color: #1F2A44;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.9em 0;
+  font-size: 0.84rem;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #E2E8F0;
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: #EFF5FC;
+  font-weight: 600;
+  color: #002451;
+}
+
+.markdown-body hr {
+  border: 0;
+  border-top: 1px solid #E2E8F0;
+  margin: 1.2em 0;
+}
+
+/* Subtle scrollbar for the panels that scroll internally */
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(31, 42, 68, 0.2);
+  border-radius: 9999px;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 42, 68, 0.35);
+}
